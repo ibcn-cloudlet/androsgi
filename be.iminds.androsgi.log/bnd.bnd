@@ -1,0 +1,13 @@
+-buildpath: osgi.enterprise,\
+	android,\
+	osgi.core;version=5.0
+-pluginpath:	../be.iminds.bnd.plugin.android/generated/be.iminds.bnd.plugin.android.jar
+-plugin: 		be.iminds.bnd.plugin.android.AndroidPlugin
+Bundle-Version: 1.0.0
+Bundle-Activator: be.iminds.androsgi.log.Activator
+Private-Package: be.iminds.androsgi.log
+
+Bundle-Copyright: Copyright Ghent University - iMinds (c) 2014
+Bundle-License: BSD New (http://opensource.org/licenses/BSD-3-Clause)
+Bundle-DocURL: http://aiolos.intec.ugent.be
+-includeresource: ../LICENSE.txt

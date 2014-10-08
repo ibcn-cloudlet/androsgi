@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="be.iminds.androsgi"
+      label="Androsgi"
+      version="1.0.0"
+      provider-name="Ghent University - iMinds">
+
+   <description>
+      The Androsgi Builder allows you to easily integrate OSGi in your Android project.
+   </description>
+
+   <copyright>
+      Copyright (c) 2013 Ghent University - iMinds
+   </copyright>
+
+   <license url="">
+      This plugin is free to use for non-commercial use. This is alpha software, use at your own risk.
+   </license>
+
+   <url>
+      <update label="Androsgi Update site" url="http://users.ugent.be/~tverbele/plugin"/>
+   </url>
+
+   <plugin
+         id="be.iminds.androsgi.builder"
+         download-size="0"
+         install-size="0"
+         version="1.0.0"
+         unpack="false"/>
+
+</feature>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+    <extension id="be.iminds.androsgi.builder.AndroidOSGiBuilder" name="Android OSGi Builder" point="org.eclipse.core.resources.builders">
+      <builder>
+         <run class="be.iminds.androsgi.builder.AndroidOSGiBuilder">
+            <parameter name="optimize" value="true" />
+            <parameter name="comment" value="Builder comment" />
+         </run>
+      </builder>
+    </extension>
+    <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="Androsgi Commands"
+            id="be.iminds.androsgi.category">
+      </category>
+      <command
+            name="Convert to Androsgi Project"
+            defaultHandler="be.iminds.androsgi.builder.AndrosgiConvertHandler"
+            categoryId="be.iminds.androsgi.category"
+            id="be.iminds.androsgi.builder.AndrosgiConvertHandler">
+      </command>
+   </extension>
+   
+   
+    <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            id="be.iminds.androsgi.builder.AndrosgiConvert"
+            objectClass="org.eclipse.core.resources.IProject">
+         <action
+               class="be.iminds.androsgi.builder.AndrosgiConvert"
+               enablesFor="+"
+               label="Convert to Androsgi Project"
+               menubarPath="org.eclipse.ui.projectConfigure/additions"
+               style="push">
+         </action>
+         <visibility>
+            <and>
+               <objectState
+                     name="projectNature"
+                     value="org.eclipse.jdt.core.javanature">
+               </objectState>
+               <objectState
+                     name="projectNature"
+                     value="com.android.ide.eclipse.adt.AndroidNature">
+               </objectState>
+               <not>
+                  <objectState
+                        name="projectNature"
+                        value="bndtools.core.bndnature">
+                  </objectState>
+               </not>
+            </and>
+         </visibility>
+      </objectContribution>
+   </extension>  
+</plugin>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="Androsgi update site" url="http://users.ugent.be/~tverbele/plugin">
+      The Androsgi update site for Android-OSGi related plugins
+   </description>
+   <feature url="features/be.iminds.androsgi_1.0.0.jar" id="be.iminds.androsgi" version="1.0.0"/>
+</site>

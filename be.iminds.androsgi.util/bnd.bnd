@@ -1,0 +1,10 @@
+-buildpath: android,\
+	osgi.core;version=5.0
+-sources: false
+Bundle-Version: 1.0.0
+Export-Package: be.iminds.androsgi.util
+
+Bundle-Copyright: Copyright Ghent University - iMinds (c) 2014
+Bundle-License: BSD New (http://opensource.org/licenses/BSD-3-Clause)
+Bundle-DocURL: http://aiolos.intec.ugent.be
+-includeresource: ../LICENSE.txt
